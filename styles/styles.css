@@ -120,6 +120,17 @@ nav a.active {
     font-size: 32px;
     margin-bottom: 40px;
     color: #1a1a2e;
+    position: relative;
+}
+
+.features h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #e94560;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .cards {
@@ -137,11 +148,13 @@ nav a.active {
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    border-bottom: 4px solid transparent;
 }
 
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    border-bottom: 4px solid #e94560;
 }
 
 .card-icon {
@@ -180,6 +193,12 @@ nav a.active {
     text-align: center;
     padding: 20px;
     font-size: 14px;
+    margin-top: 40px;
+}
+
+/* ===== SCROLL TO TOP ANIMATION ===== */
+html {
+    scroll-behavior: smooth;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -210,5 +229,28 @@ nav a.active {
 
     .card {
         width: 90%;
+    }
+
+    .features {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 14px;
     }
 }
